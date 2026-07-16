@@ -6,12 +6,24 @@ import HomePage from './pages/HomePage';
 import QuestionDetailsPage from './pages/QuestionDetailsPage';
 
 function App() {
+
+
+
   return (
     <QuestionProvider>
       <div className="app-shell">
         {/* <Header /> */}
         <main className="main-grid">
-          <Employee />
+            <Employee
+  name1="John1"
+  position1="React Developer1"
+  salary1={2500}
+/>
+       <Employee
+  name1="John1"
+  position1="React Developer1"
+  salary1={2500}
+/>
           {/* <QuestionDetailsPage />
           <AddQuestionPage /> */}
         </main>

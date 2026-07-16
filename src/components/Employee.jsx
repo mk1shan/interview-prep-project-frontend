@@ -1,20 +1,25 @@
 import React from 'react'
 
-function Employee() {
-       const name = "john";
-       const position ="recat dev";
-       const salary =2500;
+function Employee(props) {
+   
 
 
   return (
     <div>
   <h1>Employee Details</h1>
 
+   <p>{props.name1}</p>
+
+      <p> {props.position1}</p>
+
+      <p>{props.salary1}</p>
+
+{/* 
       <p>Name: {name}</p>
 
       <p>Position: {position}</p>
 
-      <p>Salary: ${salary}</p>
+      <p>Salary: ${salary}</p> */}
    
 
 
