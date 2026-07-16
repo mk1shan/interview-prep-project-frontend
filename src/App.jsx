@@ -1,34 +1,22 @@
-import Navbar from './components/Navbar';
-import ProtectedRoute from './components/ProtectedRoute';
-import { AuthProvider } from './context/AuthContext';
+import Employee from './components/Employee';
+import Header from './components/Header';
+import { QuestionProvider } from './context/QuestionContext';
+import AddQuestionPage from './pages/AddQuestionPage';
 import HomePage from './pages/HomePage';
-import InterviewPage from './pages/InterviewPage';
-import LoginPage from './pages/LoginPage';
-import QuestionsPage from './pages/QuestionsPage';
-import RegisterPage from './pages/RegisterPage';
-import ResultPage from './pages/ResultPage';
-import SessionsPage from './pages/SessionsPage';
-import StartInterviewPage from './pages/StartInterviewPage';
+import QuestionDetailsPage from './pages/QuestionDetailsPage';
 
 function App() {
   return (
-    <AuthProvider>
+    <QuestionProvider>
       <div className="app-shell">
-        <Navbar />
-        <main className="content">
-          <ProtectedRoute>
-            <HomePage />
-            <QuestionsPage />
-            <StartInterviewPage />
-            <InterviewPage />
-            <ResultPage />
-            <SessionsPage />
-          </ProtectedRoute>
-          <LoginPage />
-          <RegisterPage />
+        {/* <Header /> */}
+        <main className="main-grid">
+          <Employee />
+          {/* <QuestionDetailsPage />
+          <AddQuestionPage /> */}
         </main>
       </div>
-    </AuthProvider>
+    </QuestionProvider>
   );
 }
 
